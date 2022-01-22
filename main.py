@@ -2,38 +2,38 @@
 from browser import document, alert 
 
 # deklarasi Variabel
-input = document['input']
+input1 = document['input1']
 button = document['btn']
 output = document['output']
 selectType = document['select-type']
 selectCalculated = document['select-calculated']
 
 #Perhitungan konversi berat menggunakan lambda
-type1 = {'Gram' : {'Gram' : {'Rumus': lambda berat: berat, 'input': 'Masukkan Nilai'},
-                'Ons': {'Rumus': lambda berat: berat / 100, 'input': 'Masukkan Nilai'},
-                'Kilogram': {'Rumus': lambda berat: berat / 1000, 'input': 'Masukkan Nilai'},
-                'Kwintal': {'Rumus': lambda berat: berat / 100000, 'input': 'Masukkan Nilai'},
-                'Ton': {'Rumus': lambda berat: berat / 1000000, 'input': 'Masukkan Nilai'}},
-        'Ons': {'Ons': {'Rumus': lambda berat:berat, 'input': 'Masukkan Nilai'},
-                'Gram': {'Rumus': lambda berat: berat * 100, 'input': 'Masukkan Nilai'},
-                'Kilogram': {'Rumus': lambda berat: berat / 10, 'input': 'Masukkan Nilai'},
-                'Kwintal': {'Rumus': lambda berat: berat / 1000, 'input': 'Masukkan Nilai'},
-                'Ton': {'Rumus': lambda berat: berat / 10000, 'input': 'Masukkan Nilai'}},
-        'Kilogram': {'Kilogram': {'Rumus': lambda berat:berat, 'input': 'Masukkan Nilai'},
-                'Gram': {'Rumus': lambda berat: berat * 1000, 'input': 'Masukkan Nilai'},
-                'Ons': {'Rumus': lambda berat: berat * 10, 'input': 'Masukkan Nilai'},
-                'Kwintal': {'Rumus': lambda berat: berat / 100, 'input': 'Masukkan Nilai'},
-                'Ton': {'Rumus': lambda berat: berat / 1000, 'input': 'Masukkan Nilai'}},
-        'Kwintal': {'Kwintal': {'Rumus': lambda berat:berat, 'input': 'Masukkan Nilai'},
-                'Gram': {'Rumus': lambda berat: berat * 100000, 'input': 'Masukkan Nilai'},
-                'Ons': {'Rumus': lambda berat: berat * 1000, 'input': 'Masukkan Nilai'},
-                'Kilogram': {'Rumus': lambda berat: berat * 100, 'input': 'Masukkan Nilai'},
-                'Ton': {'Rumus': lambda berat: berat / 10, 'input': 'Masukkan Nilai'}},
-        'Ton': {'Ton': {'Rumus': lambda berat:berat, 'input': 'Masukkan Nilai'},
-                'Gram': {'Rumus': lambda berat: berat * 1000000, 'input': 'Masukkan Nilai'},
-                'Ons': {'Rumus': lambda berat: berat * 10000, 'input': 'Masukkan Nilai'},
-                'Kilogram': {'Rumus': lambda berat: berat * 1000, 'input': 'Masukkan Nilai'},
-                'Ton': {'Rumus': lambda berat: berat * 10, 'input': 'Masukkan Nilai'}}}
+type1 = {'Gram' : {'Gram' : {'Rumus': lambda berat: berat, 'input1': 'Masukkan Nilai'},
+                'Ons': {'Rumus': lambda berat: berat / 100, 'input1': 'Masukkan Nilai'},
+                'Kilogram': {'Rumus': lambda berat: berat / 1000, 'input1': 'Masukkan Nilai'},
+                'Kwintal': {'Rumus': lambda berat: berat / 100000, 'input1': 'Masukkan Nilai'},
+                'Ton': {'Rumus': lambda berat: berat / 1000000, 'input1': 'Masukkan Nilai'}},
+        'Ons': {'Ons': {'Rumus': lambda berat:berat, 'input1': 'Masukkan Nilai'},
+                'Gram': {'Rumus': lambda berat: berat * 100, 'input1': 'Masukkan Nilai'},
+                'Kilogram': {'Rumus': lambda berat: berat / 10, 'input1': 'Masukkan Nilai'},
+                'Kwintal': {'Rumus': lambda berat: berat / 1000, 'input1': 'Masukkan Nilai'},
+                'Ton': {'Rumus': lambda berat: berat / 10000, 'input1': 'Masukkan Nilai'}},
+        'Kilogram': {'Kilogram': {'Rumus': lambda berat:berat, 'input1': 'Masukkan Nilai'},
+                'Gram': {'Rumus': lambda berat: berat * 1000, 'input1': 'Masukkan Nilai'},
+                'Ons': {'Rumus': lambda berat: berat * 10, 'input1': 'Masukkan Nilai'},
+                'Kwintal': {'Rumus': lambda berat: berat / 100, 'input1': 'Masukkan Nilai'},
+                'Ton': {'Rumus': lambda berat: berat / 1000, 'input1': 'Masukkan Nilai'}},
+        'Kwintal': {'Kwintal': {'Rumus': lambda berat:berat, 'input1': 'Masukkan Nilai'},
+                'Gram': {'Rumus': lambda berat: berat * 100000, 'input1': 'Masukkan Nilai'},
+                'Ons': {'Rumus': lambda berat: berat * 1000, 'input1': 'Masukkan Nilai'},
+                'Kilogram': {'Rumus': lambda berat: berat * 100, 'input1': 'Masukkan Nilai'},
+                'Ton': {'Rumus': lambda berat: berat / 10, 'input1': 'Masukkan Nilai'}},
+        'Ton': {'Ton': {'Rumus': lambda berat:berat, 'input1': 'Masukkan Nilai'},
+                'Gram': {'Rumus': lambda berat: berat * 1000000, 'input1': 'Masukkan Nilai'},
+                'Ons': {'Rumus': lambda berat: berat * 10000, 'input1': 'Masukkan Nilai'},
+                'Kilogram': {'Rumus': lambda berat: berat * 1000, 'input1': 'Masukkan Nilai'},
+                'Ton': {'Rumus': lambda berat: berat * 10, 'input1': 'Masukkan Nilai'}}}
 
 # Akan dijalankan pada saat pilihan diubah dari satuan berat 
 def selectTypeAction(ev):
@@ -58,7 +58,7 @@ def getNum(x):
         if temp != '' and type(temp) is str:
             alert('Harap masukkan berat')
             temp = ''
-            input.value = temp
+            input1.value = temp
             return temp
         # Jika salah satu convert berhasil, maka return
         else:
