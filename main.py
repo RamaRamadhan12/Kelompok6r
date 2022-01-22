@@ -2,7 +2,7 @@
 from browser import document, alert 
 
 # deklarasi Variabel
-input = document['input1']
+input = document['input']
 button = document['btn']
 output = document['output']
 selectType = document['select-type']
